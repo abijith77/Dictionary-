@@ -1,0 +1,33 @@
+Given the following dictionary:
+portfolio = {
+'accounts': ['SBI', 'IOB'], 'shares':' [HDFC, 'ICICI', 'TM', 'TCS'], 'ornaments': ['10 gm gold', '1 kg silver'] }
+
+Write a program to perform the following operations:
+- Add a key to portfolio called 'MF' with values 'Relaince' and 'ABSI'.
+- Set the value of 'accounts' to a list containing 'Axis' and 'BOB'.
+- Sort the items in the list stored under the 'shares' key. Delete the list stored under 'ornaments' key.
+
+Program:
+portfolio = {
+    'accounts': ['SBI', 'IOB'],
+    'shares': ['HDFC', 'ICICI', 'TM', 'TCS'],
+    'ornaments': ['10 gm gold', '1 kg silver']
+}
+
+portfolio['MF'] = ['Reliance', 'ABSI']
+print(portfolio)
+
+portfolio['accounts'] = ['Axis', 'BOB']
+print(portfolio)
+
+portfolio['shares'].sort()
+print(portfolio)
+
+del portfolio['ornaments']
+print(portfolio)
+
+Output:
+{'accounts': ['SBI', 'IOB'], 'shares': ['HDFC', 'ICICI', 'TM', 'TCS'], 'ornaments': ['10 gm gold', '1 kg silver'], 'MF': ['Reliance', 'ABSI']}
+{'accounts': ['Axis', 'BOB'], 'shares': ['HDFC', 'ICICI', 'TM', 'TCS'], 'ornaments': ['10 gm gold', '1 kg silver'], 'MF': ['Reliance', 'ABSI']}
+{'accounts': ['Axis', 'BOB'], 'shares': ['HDFC', 'ICICI', 'TCS', 'TM'], 'ornaments': ['10 gm gold', '1 kg silver'], 'MF': ['Reliance', 'ABSI']}
+{'accounts': ['Axis', 'BOB'], 'shares': ['HDFC', 'ICICI', 'TCS', 'TM'], 'MF': ['Reliance', 'ABSI']}

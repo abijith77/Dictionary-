@@ -1,5 +1,4 @@
 1.Write a program that reads a string from the keyboard and creates dictionary containing frequency of each character occurring in the string. Also print these occurrences in the form of a histogram.
-
 Program:
 s = input("Enter any string:")
 freq={}
