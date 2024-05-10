@@ -1,0 +1,33 @@
+2. ) Create a dictionary containing names of students and marks.
+obtained by them in three subjects. Write a program to replace the
+marks in three subjects with the total in three subjects, and average marks. Also report the topper of the class.
+
+Program:
+student_marks = {
+    "Singh": [80, 75, 90],
+    "Saran": [85, 90, 95],
+    "Billa": [95, 84, 90]
+}
+
+for student, marks in student_marks.items():
+    total_marks = sum(marks)
+    average_marks = int(total_marks / len(marks))
+    student_marks[student] = [total_marks, average_marks]
+
+topper = max(student_marks, key=lambda x: student_marks[x][1])
+
+print("The total and average marks are:")
+print("Updated student marks:")
+for student, marks in student_marks.items():
+    print(f"{student}: Total Marks - {marks[0]}, Average Marks - {marks[1]}")
+
+print(f"\nTopper of the class: {topper}")
+
+Output:
+The total and average marks are:
+Updated student marks:
+Singh: Total Marks - 245, Average Marks - 81
+Saran: Total Marks - 270, Average Marks - 90
+Billa: Total Marks - 269, Average Marks - 89
+
+Topper of the class: Saran
