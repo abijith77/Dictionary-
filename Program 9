@@ -1,0 +1,20 @@
+9.Suppose a dictionary contains 5 key-value pairs of name and marks. Write a program to print them from last pair to first pair. Keep deleting every pair printed, such that the end of printing the dictionary falls empty.
+
+Program:
+marks={'Suba':88,'Amol':78,'Raka':56,'Dinesh':68,'Ranjit':88}
+l=len(marks)
+for i in range(l):
+    print("Removed name:",marks.popitem())
+    print(marks)
+
+Output:
+Removed name: ('Ranjit', 88)
+{'Suba': 88, 'Amol': 78, 'Raka': 56, 'Dinesh': 68}
+Removed name: ('Dinesh', 68)
+{'Suba': 88, 'Amol': 78, 'Raka': 56}
+Removed name: ('Raka', 56)
+{'Suba': 88, 'Amol': 78}
+Removed name: ('Amol', 78)
+{'Suba': 88}
+Removed name: ('Suba', 88)
+{}
