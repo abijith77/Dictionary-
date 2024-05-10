@@ -1,0 +1,35 @@
+7.Given the following dictionary
+marks = {
+'Subu': {'Maths': 88, 'Eng': 60, 'SSt': 95), 'Amol': {'Maths': 78, 'Eng': 68, 'SSt': 89}, 'Raka': {'Maths': 56, 'Eng': 66, 'SSt': 77}
+}
+Write a program to perform the following operations:
+Print marks obtained by Amol in English.
+- Set marks obtained by Raka in Maths to 77.
+- Sort the dictionary by name.
+
+Program:
+# Given dictionary of marks
+marks = {
+    'Subu': {'Maths': 88, 'Eng': 60, 'SSt': 95},
+    'Amol': {'Maths': 78, 'Eng': 68, 'SSt': 89},
+    'Raka': {'Maths': 56, 'Eng': 66, 'SSt': 77}
+}
+
+print("Marks obtained by Amol in English:", marks['Amol']['Eng'])
+
+marks['Raka']['Maths'] = 77
+print("Marks after updating Raka's math marks is",marks['Raka']['Maths'])
+
+sorted_marks = dict(sorted(marks.items()))
+print("\nSorted marks:")
+for name, subject_marks in sorted_marks.items():
+    print(name + ":", subject_marks)
+
+Output:
+Marks obtained by Amol in English: 68
+Marks after updating Raka's math marks is 77
+
+Sorted marks:
+Amol: {'Maths': 78, 'Eng': 68, 'SSt': 89}
+Raka: {'Maths': 77, 'Eng': 66, 'SSt': 77}
+Subu: {'Maths': 88, 'Eng': 60, 'SSt': 95}
