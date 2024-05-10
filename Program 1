@@ -1,0 +1,31 @@
+1.Write a program that reads a string from the keyboard and creates dictionary containing frequency of each character occurring in the string. Also print these occurrences in the form of a histogram.
+
+Program:
+s = input("Enter any string:")
+freq={}
+for ch in s:
+		if ch in freq:
+			freq[ch]+=1
+		else:
+			freq[ch]=1
+print ("Count of all characters is:", freq)
+
+for k, v in freq.items():
+    print(k,':',end='')
+    for i in range(0,v):
+    	print('*',end='')
+    print()
+
+Output:
+Enter any string:Abijith P R
+Count of all characters is: {'A': 1, 'b': 1, 'i': 2, 'j': 1, 't': 1, 'h': 1, ' ': 2, 'P': 1, 'R': 1}
+A :*
+b :*
+i :**
+j :*
+t :*
+h :*
+  :**
+P :*
+R :*
+
