@@ -1,0 +1,26 @@
+4. Create two dictionaries one containing grocery items and their prices and another containing grocery items and quantity purchased. By using the values from these two dictionaries compute the total bill.
+
+Program:
+# Dictionary containing grocery items and their prices
+grocery_prices = {
+    "apple": 25.50,
+    "banana": 7.0,
+    "egg": 5.50,
+    "bread": 35.00
+}
+#Dictionary with grocery items and quantity
+grocery_quantity = {
+    "apple": 3,
+    "banana": 3,
+    "egg": 5,
+    "bread": 1
+}
+
+total_bill = 0
+for item, quantity in grocery_quantity.items():
+    if item in grocery_prices:
+        total_bill += grocery_prices[item] * quantity
+print("Total bill:", total_bill)
+
+Output:
+Total bill: 160.0
