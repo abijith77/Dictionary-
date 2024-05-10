@@ -1,0 +1,30 @@
+5.) Which functions will you use to fetch all keys, all values and key value pairs from a given dictionary?
+
+Answers:
+To fetch all keys from a dictionary, you can use the "keys()" method. To fetch all values, you can use the "values()" method. To fetch key-value pairs, you can use the "items()" method.
+
+Program:
+# Given dictionary
+m = {
+    "apple": 2.50,
+    "banana": 1.20,
+    "milk": 3.00,
+    "bread": 2.00
+}
+# Fetch all keys
+keys = m.keys()
+# Fetch all values
+values = m.values()
+# Fetch key-value pairs
+items = m.items()
+
+# Print the results
+print("Keys:", keys)
+print("Values:", values)
+print("Key-Value Pairs:", items)
+
+Output:
+Keys: dict_keys(['apple', 'banana', 'milk', 'bread'])
+Values: dict_values([2.5, 1.2, 3.0, 2.0])
+Key-Value Pairs: dict_items([('apple', 2.5), ('banana', 1.2), ('milk', 3.0), ('bread', 2.0)])
+
